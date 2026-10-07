@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<meta name="description" content="Ayushman Bosu Roy — DevOps & Cloud Engineer specializing in AWS EKS, Kubernetes, Terraform, CI/CD, and MLOps. Founder of Vertex LAB, Jaipur."/>
+<meta name="description" content="Ayushman Bosu Roy — DevOps Engineer · AWS &amp; GCP cloud infrastructure, Kubernetes, Terraform, CI/CD. Founder of Vertex LAB, Jaipur. Author of SH-PDOPS (arXiv)."/>
 <meta name="theme-color" content="#05070d"/>
 <title>Ayushman Bosu Roy — DevOps & Cloud Engineer | Vertex LAB</title>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
@@ -708,6 +708,34 @@ footer .footer-meta{margin-top:8px;display:block;color:var(--dim);font-size:10px
   #cursor-glow,#cursor-dot{display:none}
   .metric{padding:0.7rem 0.9rem}
 }
+
+/* SOCIAL VISIT BUTTONS */
+.social-strip{display:flex;flex-wrap:wrap;gap:12px;margin-bottom:1.6rem;align-items:center}
+.social-strip-label{font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--dim);letter-spacing:0.12em;text-transform:uppercase;display:flex;align-items:center;gap:8px}
+.social-strip-label::after{content:'';width:28px;height:1px;background:linear-gradient(90deg,var(--dim),transparent)}
+.social-btn{
+  --sb:#00d4ff;position:relative;display:inline-flex;align-items:center;gap:12px;
+  padding:9px 18px 9px 10px;text-decoration:none;color:var(--text);
+  background:rgba(8,12,22,0.75);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);
+  border:1px solid rgba(255,255,255,0.1);border-radius:999px;overflow:hidden;
+  transition:transform .3s cubic-bezier(.34,1.56,.64,1),box-shadow .3s,border-color .3s;
+}
+.social-btn.gh{--sb:#a855f7}
+.social-btn.li{--sb:#0a8bff}
+.social-btn::before{content:'';position:absolute;inset:0;background:linear-gradient(110deg,transparent 30%,color-mix(in srgb,var(--sb) 35%,transparent) 50%,transparent 70%);transform:translateX(-120%);transition:transform .7s ease}
+.social-btn:hover{transform:translateY(-4px) scale(1.03);border-color:var(--sb);box-shadow:0 10px 34px rgba(0,0,0,.5),0 0 26px color-mix(in srgb,var(--sb) 45%,transparent)}
+.social-btn:hover::before{transform:translateX(120%)}
+.sb-icon{position:relative;width:36px;height:36px;border-radius:50%;display:grid;place-items:center;flex-shrink:0;background:#05070d;z-index:1}
+.sb-icon::before{content:'';position:absolute;inset:-2px;border-radius:50%;background:conic-gradient(var(--sb),transparent 60%,var(--sb));animation:sb-spin 3s linear infinite;z-index:-1}
+.sb-icon::after{content:'';position:absolute;inset:1px;border-radius:50%;background:#05070d;z-index:-1}
+@keyframes sb-spin{to{transform:rotate(360deg)}}
+.sb-icon svg{width:18px;height:18px;fill:var(--sb);filter:drop-shadow(0 0 6px var(--sb))}
+.sb-text{display:flex;flex-direction:column;line-height:1.25;z-index:1}
+.sb-title{font-weight:700;font-size:13px;letter-spacing:.02em}
+.sb-sub{font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--muted)}
+.sb-arrow{font-family:'JetBrains Mono',monospace;font-size:13px;color:var(--sb);z-index:1;transition:transform .3s}
+.social-btn:hover .sb-arrow{transform:translate(4px,-4px)}
+@media(max-width:768px){.social-btn{padding:8px 14px 8px 8px}.sb-sub{display:none}.social-strip-label{width:100%}}
 </style>
 </head>
 <body>
@@ -722,7 +750,7 @@ footer .footer-meta{margin-top:8px;display:block;color:var(--dim);font-size:10px
   <div class="nav-links">
     <a href="#about">About</a>
     <a href="#experience">Experience</a><a href="#skills">Skills</a>
-    <a href="#projects">Projects</a><a href="#certifications">Certs</a><a href="#contact">Contact</a>
+    <a href="#projects">Projects</a><a href="#publications">Paper</a><a href="#certifications">Certs</a><a href="#contact">Contact</a>
   </div>
   <a href="mailto:ayushmanbosuroy@gmail.com" class="nav-cta">Hire Me</a>
 </nav>
@@ -734,15 +762,28 @@ footer .footer-meta{margin-top:8px;display:block;color:var(--dim);font-size:10px
   <div class="hero-overlay"></div>
   <div class="hero-overlay-bottom"></div>
   <div class="hero-inner">
+    <div class="social-strip">
+      <span class="social-strip-label">// find me on</span>
+      <a class="social-btn gh" href="https://github.com/ayu-haker" target="_blank" rel="noopener" aria-label="Visit Ayushman's GitHub profile">
+        <span class="sb-icon"><svg viewBox="0 0 24 24"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.58.1.79-.25.79-.56v-2c-3.2.7-3.88-1.54-3.88-1.54-.52-1.33-1.28-1.69-1.28-1.69-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.18 1.76 1.18 1.03 1.76 2.69 1.25 3.35.96.1-.74.4-1.25.73-1.54-2.55-.29-5.24-1.28-5.24-5.69 0-1.26.45-2.28 1.18-3.09-.12-.29-.51-1.46.11-3.05 0 0 .97-.31 3.17 1.18a11 11 0 0 1 5.77 0c2.2-1.49 3.17-1.18 3.17-1.18.62 1.59.23 2.76.11 3.05.74.81 1.18 1.83 1.18 3.09 0 4.42-2.69 5.39-5.25 5.68.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.51 11.51 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5z"/></svg></span>
+        <span class="sb-text"><span class="sb-title">Visit GitHub</span><span class="sb-sub">github.com/ayu-haker</span></span>
+        <span class="sb-arrow">↗</span>
+      </a>
+      <a class="social-btn li" href="https://www.linkedin.com/in/ayushmanbosu-roy-24b3842b1/" target="_blank" rel="noopener" aria-label="Visit Ayushman's LinkedIn profile">
+        <span class="sb-icon"><svg viewBox="0 0 24 24"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg></span>
+        <span class="sb-text"><span class="sb-title">Visit LinkedIn</span><span class="sb-sub">in/ayushmanbosu-roy</span></span>
+        <span class="sb-arrow">↗</span>
+      </a>
+    </div>
     <div class="hero-eyebrow">🟢 &nbsp;Available for DevOps / Cloud opportunities</div>
     <h1><span class="name-first">Ayushman</span><span class="name-last">Bosu Roy</span></h1>
     <div class="hero-title"><span class="hl">DevOps</span> · Cloud · MLOps · Platform Engineering</div>
-    <p class="hero-desc">Building resilient cloud infrastructure and shipping fast. From AWS EKS clusters to LLM production pipelines — I automate the boring stuff so teams can ship the brilliant stuff.</p>
+    <p class="hero-desc">DevOps Engineer · AWS &amp; GCP Cloud Infrastructure · Kubernetes · Terraform · CI/CD. I design scalable cloud infrastructure and automated, reliable delivery pipelines — and author research on self-healing, AI-driven DevOps.</p>
     <div class="hero-metrics">
-      <div class="metric"><div class="metric-val">99.9<span>%</span></div><div class="metric-label">Uptime achieved</div></div>
-      <div class="metric"><div class="metric-val">40<span>%</span></div><div class="metric-label">Deploy cycle cut</div></div>
-      <div class="metric"><div class="metric-val">65<span>%</span></div><div class="metric-label">Provisioning faster</div></div>
-      <div class="metric"><div class="metric-val">5<span>+</span></div><div class="metric-label">Production systems</div></div>
+      <div class="metric"><div class="metric-val">1<span></span></div><div class="metric-label">Published paper (arXiv)</div></div>
+      <div class="metric"><div class="metric-val">4<span></span></div><div class="metric-label">Key projects</div></div>
+      <div class="metric"><div class="metric-val">10<span>+</span></div><div class="metric-label">Certifications &amp; badges</div></div>
+      <div class="metric"><div class="metric-val">25<span>+</span></div><div class="metric-label">Tools in CommitOS</div></div>
     </div>
     <div class="hero-btns">
       <a href="Ayushman_DevOps_Resume.pdf" download="Ayushman_DevOps_Resume.pdf" class="btn-primary">⬇ Download Resume</a>
@@ -781,36 +822,37 @@ footer .footer-meta{margin-top:8px;display:block;color:var(--dim);font-size:10px
           <div class="about-badge"><span class="about-badge-icon">📍</span> Jaipur, India</div>
           <div class="about-badge"><span class="about-badge-icon">🎓</span> B.Tech Computer Engg.</div>
           <div class="about-badge"><span class="about-badge-icon">🏢</span> Founder — Vertex LAB</div>
+          <div class="about-badge"><span class="about-badge-icon">🗣️</span> Hindi · English · Bengali</div>
           <div class="about-badge"><span class="about-badge-icon">🟢</span> Open to opportunities</div>
         </div>
       </div>
 
       <div class="about-content reveal reveal-right stagger-2">
         <p class="about-bio">
-          I'm <strong>Ayushman Bosu Roy</strong> — a <span class="hl">DevOps & Cloud Engineer</span> from Jaipur, India, passionate about building infrastructure that teams can rely on at 3am without panic.
+          I'm <strong>Ayushman Bosu Roy</strong> — a <span class="hl">DevOps Engineer</span> from Jaipur, India, and B.Tech student specializing in DevOps, MLOps and cloud-native engineering.
         </p>
         <p class="about-bio">
-          I founded <strong>Vertex LAB</strong> to bridge the gap between raw cloud infrastructure and production-ready systems. My work spans <span class="hl">AWS EKS</span>, <span class="hl">Kubernetes</span>, <span class="hl">Terraform IaC</span>, and <span class="hl">MLOps</span> — from architecting zero-downtime deployments to shipping LLM-powered platforms with full CI/CD pipelines.
+          I design scalable cloud infrastructure, build <span class="hl">CI/CD pipelines</span> and streamline deployment workflows using <span class="hl">Docker</span>, <span class="hl">Kubernetes</span> and <span class="hl">Terraform</span> across <span class="hl">AWS</span> and <span class="hl">GCP</span>. I combine hands-on DevSecOps practice with a strong foundation in cybersecurity and cloud automation to deliver secure, reliable, automated systems — and I actively contribute to open-source and cloud-native community initiatives.
         </p>
         <p class="about-bio">
-          Currently pursuing <strong>B.Tech in Computer Engineering</strong> at GIT Jaipur with a <strong>Minor in Artificial Intelligence</strong> from IIT Ropar — I bridge the gap between engineering fundamentals and real-world cloud operations every day.
+          I'm a <strong>B.Tech student</strong> at GIT Jaipur with a <strong>Minor in Artificial Intelligence</strong> from IIT Ropar, with a strong interest in <span class="hl">Full Stack Development</span>, <span class="hl">DevOps</span>, <span class="hl">MLOps</span> and <span class="hl">Generative AI</span>. Recent work includes <strong>AI Mentor</strong> (an intelligent mentoring and learning platform), React/Node.js/MongoDB apps, Dockerized CI/CD and cloud deployments, and open-source contributions. I'm actively seeking opportunities as a <strong>DevOps Engineer, MLOps Engineer or AI Engineer</strong> — let's build impactful technology together.
         </p>
         <div class="about-highlights">
           <div class="about-highlight" style="--hl-color:#00d4ff">
             <div class="about-highlight-title">⚙️ Infrastructure</div>
-            <div class="about-highlight-text">AWS, GCP, Kubernetes, Terraform — production-grade IaC at scale</div>
+            <div class="about-highlight-text">AWS, GCP, Azure, Kubernetes, Terraform — scalable, automated cloud infrastructure</div>
           </div>
           <div class="about-highlight" style="--hl-color:#a855f7">
             <div class="about-highlight-title">🔒 Security</div>
-            <div class="about-highlight-text">DevSecOps, SAST/DAST, Zero-Trust, Vault — security baked in by default</div>
+            <div class="about-highlight-text">DevSecOps, SIEM, SonarQube — security baked into the pipeline</div>
           </div>
           <div class="about-highlight" style="--hl-color:#00ff88">
             <div class="about-highlight-title">🤖 AI / MLOps</div>
-            <div class="about-highlight-text">LangChain, RAG pipelines, Pinecone — LLMs in production</div>
+            <div class="about-highlight-text">AI Mentor, SH-PDOPS, local LLMs — AI-driven DevOps automation</div>
           </div>
           <div class="about-highlight" style="--hl-color:#ffb700">
             <div class="about-highlight-title">📊 Observability</div>
-            <div class="about-highlight-text">Prometheus, Grafana, ELK — full-stack visibility, SLO-driven ops</div>
+            <div class="about-highlight-text">Prometheus &amp; Grafana — monitoring and observability for automated deployments</div>
           </div>
         </div>
       </div>
@@ -831,14 +873,14 @@ footer .footer-meta{margin-top:8px;display:block;color:var(--dim);font-size:10px
       <div class="exp-item reveal reveal-left stagger-1">
         <div class="exp-line"><div class="exp-dot"></div></div>
         <div class="exp-content">
-          <div class="exp-period">Mar 2026 – Nov 2026</div>
+          <div class="exp-period">March 2026 – Present</div>
           <div class="exp-role">DevOps Architect</div>
-          <div class="exp-company">Pedestal Techno World Pvt. Ltd. <span class="badge">Jaipur</span></div>
+          <div class="exp-company">Pedestal Edtech — A Unit of Pedestal Techno World Pvt. Ltd. <span class="badge">Jaipur</span></div>
           <ul class="exp-bullets">
-            <li>Designed end-to-end <strong>CI/CD pipelines</strong> across staging and production using Docker, Kubernetes, and GitOps workflows — cutting deployment cycle time by <strong>40%</strong></li>
-            <li>Enforced IaC practices with <strong>Terraform + Ansible</strong> for repeatable, auditable environment provisioning; led root cause analysis reducing MTTR significantly</li>
-            <li>Maintained <strong>SLA/SLO compliance</strong> via incident management runbooks and proactive monitoring with Prometheus & Grafana</li>
-            <li>Applied AWS Well-Architected Framework best practices for operational excellence, security compliance, and data privacy across regulated workloads</li>
+            <li>Set up and managed cloud infrastructure using <strong>Docker and Kubernetes</strong></li>
+            <li>Maintained Docker environments to make development faster and easier for the team</li>
+            <li>Improved back-end <strong>microservices</strong> for better speed and reliability</li>
+            <li>Fixed networking and deployment issues across staging environments</li>
           </ul>
         </div>
       </div>
@@ -846,14 +888,14 @@ footer .footer-meta{margin-top:8px;display:block;color:var(--dim);font-size:10px
       <div class="exp-item reveal reveal-left stagger-2">
         <div class="exp-line"><div class="exp-dot"></div></div>
         <div class="exp-content">
-          <div class="exp-period">Dec 2025 – Present</div>
-          <div class="exp-role">Founder & Lead DevOps Engineer</div>
-          <div class="exp-company">Vertex LAB <span class="badge">Jaipur</span></div>
+          <div class="exp-period">August 2026 – September 2026</div>
+          <div class="exp-role">DevOps & Cloud Engineer</div>
+          <div class="exp-company">Zetheta Algorithms Private Limited <span class="badge">Jaipur</span></div>
           <ul class="exp-bullets">
-            <li>Architected cloud-native microservices on <strong>AWS EKS + GCP Cloud Run</strong> with Terraform IaC and Kubernetes HPA — achieving <strong>99.9% uptime</strong>, provisioning time down <strong>65%</strong></li>
-            <li>Led end-to-end cloud migration planning (rehost/replatform/refactor) using <strong>AWS Migration Hub + MGN</strong>; built TCO analysis and migration roadmaps aligned with business objectives</li>
-            <li>Built full DevOps toolchain: <strong>GitHub Actions, ArgoCD, SonarQube, Trivy</strong> with CI/CD + DevSecOps SAST/DAST quality gates</li>
-            <li>Acted as trusted advisor on cloud strategy, cost-benefit analysis, and LLM/RAG production services for stakeholders</li>
+            <li>Built and tested <strong>CI/CD pipelines</strong> for automatic app deployment</li>
+            <li>Used Docker to run and manage containerized applications, following DevOps best practices</li>
+            <li>Worked on reducing downtime during deployments and improved cloud delivery processes</li>
+            <li>Debugged deployment and infrastructure issues, and explored monitoring tools for cloud apps</li>
           </ul>
         </div>
       </div>
@@ -861,12 +903,12 @@ footer .footer-meta{margin-top:8px;display:block;color:var(--dim);font-size:10px
       <div class="exp-item reveal reveal-left stagger-3">
         <div class="exp-line"><div class="exp-dot"></div></div>
         <div class="exp-content">
-          <div class="exp-period">Jul 2025 – Sep 2025</div>
-          <div class="exp-role">Cyber Security Supervisor</div>
-          <div class="exp-company">Codec Technologies India <span class="badge">Remote · US</span></div>
+          <div class="exp-period">December 2025 – Present</div>
+          <div class="exp-role">Founder</div>
+          <div class="exp-company">Vertex LAB <span class="badge">Jaipur</span></div>
           <ul class="exp-bullets">
-            <li>Led <strong>vulnerability assessments</strong> and network security monitoring using SIEM + ELK Stack; reduced repeat incidents by <strong>30%</strong></li>
-            <li>Integrated OWASP, penetration testing, and anomaly detection into CI/CD workflows with <strong>zero-trust access controls</strong></li>
+            <li>Built tech solutions combining <strong>AI and automation</strong></li>
+            <li>Set a long-term vision (Ghost Tech) focused on growth and innovation, with tooling for modern DevOps</li>
           </ul>
         </div>
       </div>
@@ -874,11 +916,52 @@ footer .footer-meta{margin-top:8px;display:block;color:var(--dim);font-size:10px
       <div class="exp-item reveal reveal-left stagger-4">
         <div class="exp-line"><div class="exp-dot"></div></div>
         <div class="exp-content">
-          <div class="exp-period">Jun 2025 – Jul 2025</div>
-          <div class="exp-role">Web Developer Intern</div>
-          <div class="exp-company">InternPe <span class="badge">Jaipur</span></div>
+          <div class="exp-period">July 2025 – September 2025</div>
+          <div class="exp-role">Cyber Security Supervisor</div>
+          <div class="exp-company">Codec Technologies India <span class="badge">Remote · US</span></div>
           <ul class="exp-bullets">
-            <li>Built and containerized full-stack <strong>React/Node.js/MongoDB</strong> apps with Docker Compose for staging parity; JWT auth + REST APIs following Agile SDLC</li>
+            <li>Ran <strong>vulnerability assessments</strong> and helped monitor network security to catch risks early</li>
+            <li>Supported incident response and helped document security procedures</li>
+            <li>Worked with senior analysts to test security tools; hands-on experience with <strong>SIEM</strong> and <strong>SonarQube</strong></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="exp-item reveal reveal-left stagger-5">
+        <div class="exp-line"><div class="exp-dot"></div></div>
+        <div class="exp-content">
+          <div class="exp-period">June 2025</div>
+          <div class="exp-role">Python Trainee</div>
+          <div class="exp-company">Zeetron Networks Pvt. Ltd. India <span class="badge">Jaipur</span></div>
+          <ul class="exp-bullets">
+            <li>Learned core Python basics like loops, functions, data structures, and error handling</li>
+            <li>Built small scripts and beginner apps to practice problem-solving</li>
+            <li>Practiced automation with cloud-native infrastructure</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="exp-item reveal reveal-left stagger-6">
+        <div class="exp-line"><div class="exp-dot"></div></div>
+        <div class="exp-content">
+          <div class="exp-period">June 2026 – Present</div>
+          <div class="exp-role">Member</div>
+          <div class="exp-company">AWS Student Builder Group, GIT Jaipur <span class="badge">Community</span></div>
+          <ul class="exp-bullets">
+            <li>Active member of the AWS student community at GIT Jaipur</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="exp-item reveal reveal-left stagger-6">
+        <div class="exp-line"><div class="exp-dot"></div></div>
+        <div class="exp-content">
+          <div class="exp-period">May 2026 – Present</div>
+          <div class="exp-role">Campus Ambassador</div>
+          <div class="exp-company">E-Cell, IIT Bombay <span class="badge">Community</span></div>
+          <ul class="exp-bullets">
+            <li>Represented E-Cell IIT Bombay by promoting entrepreneurial initiatives at the college level</li>
+            <li>Engaged students in startup culture through outreach activities, developing strong communication and leadership skills</li>
           </ul>
         </div>
       </div>
@@ -896,90 +979,28 @@ footer .footer-meta{margin-top:8px;display:block;color:var(--dim);font-size:10px
     <div class="section-title reveal">Technical Skills</div>
     <div class="skills-grid">
       <div class="skill-group tilt-card reveal reveal-scale stagger-1"><div class="card-shine"></div>
-        <div class="skill-group-title">Cloud & IaC</div>
-        <div class="skill-tags">
-          <span class="tag hot">AWS EKS</span><span class="tag hot">AWS EC2</span><span class="tag hot">Lambda</span>
-          <span class="tag hot">VPC</span><span class="tag hot">IAM</span><span class="tag hot">RDS</span>
-          <span class="tag">S3</span><span class="tag">CloudWatch</span><span class="tag">CloudFormation</span>
-          <span class="tag hot">Terraform</span><span class="tag hot">Ansible</span><span class="tag">Pulumi</span>
-          <span class="tag">AWS CDK</span><span class="tag">GCP Cloud Run</span><span class="tag">GKE</span>
-        </div>
+        <div class="skill-group-title">Cloud Platforms</div>
+        <div class="skill-tags"><span class="tag hot">AWS</span><span class="tag hot">Google Cloud (GCP)</span><span class="tag hot">Microsoft Azure</span><span class="tag hot">Cloud-Native Architecture</span></div>
       </div>
       <div class="skill-group tilt-card reveal reveal-scale stagger-2"><div class="card-shine"></div>
-        <div class="skill-group-title">Containers & CI/CD</div>
-        <div class="skill-tags">
-          <span class="tag hot">Docker</span><span class="tag hot">Kubernetes</span><span class="tag hot">Helm</span>
-          <span class="tag hot">ArgoCD</span><span class="tag hot">GitHub Actions</span><span class="tag">Jenkins</span>
-          <span class="tag">GitLab CI</span><span class="tag">CircleCI</span><span class="tag">GitOps</span>
-          <span class="tag">Blue-Green</span><span class="tag">Canary Releases</span>
-        </div>
+        <div class="skill-group-title">Containers</div>
+        <div class="skill-tags"><span class="tag hot">Docker</span><span class="tag hot">Kubernetes</span><span class="tag">Containerization Tools</span></div>
       </div>
       <div class="skill-group tilt-card reveal reveal-scale stagger-3"><div class="card-shine"></div>
-        <div class="skill-group-title">Security & Compliance</div>
-        <div class="skill-tags">
-          <span class="tag hot">DevSecOps</span><span class="tag">OWASP</span><span class="tag hot">Trivy</span>
-          <span class="tag">SonarQube</span><span class="tag">Snyk</span><span class="tag">HashiCorp Vault</span>
-          <span class="tag">SAST/DAST</span><span class="tag">Zero-Trust</span><span class="tag">SIEM</span>
-          <span class="tag">Penetration Testing</span>
-        </div>
+        <div class="skill-group-title">CI/CD &amp; Automation</div>
+        <div class="skill-tags"><span class="tag hot">CI/CD Pipeline Design</span><span class="tag hot">Deployment Automation</span><span class="tag hot">Zero-Downtime Deployment</span><span class="tag hot">Terraform</span><span class="tag">Ansible</span><span class="tag">Jenkins</span><span class="tag">GitHub Actions</span><span class="tag">ArgoCD</span></div>
       </div>
       <div class="skill-group tilt-card reveal reveal-scale stagger-4"><div class="card-shine"></div>
-        <div class="skill-group-title">Observability & SRE</div>
-        <div class="skill-tags">
-          <span class="tag hot">Prometheus</span><span class="tag hot">Grafana</span><span class="tag">ELK Stack</span>
-          <span class="tag">Datadog</span><span class="tag">Jaeger</span><span class="tag">OpenTelemetry</span>
-          <span class="tag">SLA/SLO/SLI</span><span class="tag">HPA</span><span class="tag">Chaos Engineering</span>
-          <span class="tag">Disaster Recovery</span>
-        </div>
+        <div class="skill-group-title">Programming &amp; Scripting</div>
+        <div class="skill-tags"><span class="tag hot">Python</span><span class="tag">Go (exploring)</span><span class="tag">Bash</span></div>
       </div>
       <div class="skill-group tilt-card reveal reveal-scale stagger-5"><div class="card-shine"></div>
-        <div class="skill-group-title">AI / MLOps</div>
-        <div class="skill-tags">
-          <span class="tag hot">LangChain</span><span class="tag hot">LLM</span><span class="tag hot">RAG</span>
-          <span class="tag hot">Pinecone</span><span class="tag">Generative AI</span><span class="tag">MLOps</span>
-          <span class="tag">FastAPI</span><span class="tag">Machine Learning</span>
-        </div>
+        <div class="skill-group-title">Security &amp; Code Quality</div>
+        <div class="skill-tags"><span class="tag hot">DevSecOps</span><span class="tag">SIEM Tools</span><span class="tag">SonarQube</span></div>
       </div>
       <div class="skill-group tilt-card reveal reveal-scale stagger-6"><div class="card-shine"></div>
-        <div class="skill-group-title">Languages</div>
-        <div class="skill-tags">
-          <span class="tag hot">Python</span><span class="tag hot">Go</span><span class="tag hot">Bash/Shell</span>
-          <span class="tag">HCL (Terraform)</span><span class="tag">YAML</span><span class="tag">JavaScript</span>
-          <span class="tag">TypeScript</span><span class="tag">Linux Admin</span>
-        </div>
-      </div>
-    </div>
-
-    <div class="uptime-bar-wrap" style="margin-top:3rem">
-      <div class="uptime-row reveal stagger-1">
-        <div class="uptime-label">AWS / Cloud</div>
-        <div class="uptime-track"><div class="uptime-fill" data-width="92"></div></div>
-        <div class="uptime-val">Expert</div>
-      </div>
-      <div class="uptime-row reveal stagger-2">
-        <div class="uptime-label">Kubernetes</div>
-        <div class="uptime-track"><div class="uptime-fill" data-width="88"></div></div>
-        <div class="uptime-val">Expert</div>
-      </div>
-      <div class="uptime-row reveal stagger-3">
-        <div class="uptime-label">Terraform / IaC</div>
-        <div class="uptime-track"><div class="uptime-fill" data-width="90"></div></div>
-        <div class="uptime-val">Expert</div>
-      </div>
-      <div class="uptime-row reveal stagger-4">
-        <div class="uptime-label">CI/CD Pipelines</div>
-        <div class="uptime-track"><div class="uptime-fill" data-width="95"></div></div>
-        <div class="uptime-val">Expert</div>
-      </div>
-      <div class="uptime-row reveal stagger-5">
-        <div class="uptime-label">MLOps / LLM</div>
-        <div class="uptime-track"><div class="uptime-fill" data-width="75"></div></div>
-        <div class="uptime-val">Advanced</div>
-      </div>
-      <div class="uptime-row reveal stagger-6">
-        <div class="uptime-label">DevSecOps</div>
-        <div class="uptime-track"><div class="uptime-fill" data-width="82"></div></div>
-        <div class="uptime-val">Advanced</div>
+        <div class="skill-group-title">Observability &amp; AI</div>
+        <div class="skill-tags"><span class="tag hot">Prometheus</span><span class="tag hot">Grafana</span><span class="tag">MLOps</span><span class="tag">Local LLMs</span></div>
       </div>
     </div>
   </div>
@@ -998,21 +1019,15 @@ footer .footer-meta{margin-top:8px;display:block;color:var(--dim);font-size:10px
         <div class="proj-card-accent"></div>
         <div class="proj-card-body">
           <div class="proj-card-header">
-            <div class="proj-icon-wrap">🔄</div>
-            <div class="proj-meta">
-              <span class="proj-category" style="color:#00d4ff">CI/CD · DevSecOps</span>
-            </div>
+            <div class="proj-icon-wrap">🚖</div>
+            <div class="proj-meta"><span class="proj-category" style="color:#00d4ff">DevOps · Observability</span></div>
           </div>
-          <div class="proj-name">CI/CD GitOps Pipeline</div>
-          <div class="proj-desc">Production GitOps pipeline with automated SAST/DAST scanning and continuous deployment to AWS EKS. Parallelized stages with Docker layer caching and zero-touch rollback.</div>
-          <div class="proj-stack"><span>GitHub Actions</span><span>ArgoCD</span><span>AWS EKS</span><span>SonarQube</span><span>Trivy</span><span>Docker</span><span>Helm</span></div>
+          <div class="proj-name">Ride-Hailing Platform</div>
+          <div class="proj-desc">Production-grade microservices platform with Docker, Kubernetes, Jenkins and GitHub Actions CI/CD, plus Prometheus-Grafana monitoring — focused on automated deployments and observability.</div>
+          <div class="proj-stack"><span>Docker</span><span>Kubernetes</span><span>Jenkins</span><span>GitHub Actions</span><span>Prometheus</span><span>Grafana</span></div>
         </div>
         <div class="proj-card-footer">
-          <div class="proj-stats">
-            <div class="proj-stat"><div class="proj-stat-val">82%</div><div class="proj-stat-key">Faster deploys</div></div>
-            <div class="proj-stat"><div class="proj-stat-val">45→8m</div><div class="proj-stat-key">Deploy time</div></div>
-            <div class="proj-stat"><div class="proj-stat-val">0</div><div class="proj-stat-key">CVEs in prod</div></div>
-          </div>
+          <div class="proj-stats"><div class="proj-stat"><div class="proj-stat-val">Microservices</div><div class="proj-stat-key">Architecture</div></div><div class="proj-stat"><div class="proj-stat-val">CI/CD</div><div class="proj-stat-key">Automated</div></div></div>
           <a href="https://github.com/ayu-haker" target="_blank" class="proj-link">⌥ GitHub →</a>
         </div>
       </div>
@@ -1021,21 +1036,16 @@ footer .footer-meta{margin-top:8px;display:block;color:var(--dim);font-size:10px
         <div class="proj-card-accent"></div>
         <div class="proj-card-body">
           <div class="proj-card-header">
-            <div class="proj-icon-wrap">⚙️</div>
-            <div class="proj-meta">
-              <span class="proj-category" style="color:#a855f7">Kubernetes · SRE</span>
-            </div>
+            <div class="proj-icon-wrap">🩺</div>
+            <div class="proj-meta"><span class="proj-category" style="color:#a855f7">AI · Self-Healing DevOps</span></div>
           </div>
-          <div class="proj-name">Kubernetes Microservices Platform</div>
-          <div class="proj-desc">Production microservices on K8s with blue-green + canary releases. Prometheus/Grafana SLA/SLO dashboards. AWS Well-Architected cost optimization with HPA auto-scaling.</div>
-          <div class="proj-stack"><span>Kubernetes</span><span>Terraform</span><span>Helm</span><span>Prometheus</span><span>Grafana</span><span>HPA</span><span>AWS</span></div>
+          <div class="proj-name">SH-PDOPS</div>
+          <div class="proj-desc">AI-driven self-healing DevOps pipeline for predictive failure recovery, with a live monitoring dashboard; forms the basis of an authored publication on cloud-native reliability and intelligent automation.</div>
+          <div class="proj-stack"><span>Python</span><span>Docker</span><span>CI/CD Playbooks</span><span>Instances</span></div>
         </div>
         <div class="proj-card-footer">
-          <div class="proj-stats">
-            <div class="proj-stat"><div class="proj-stat-val">99.9%</div><div class="proj-stat-key">Uptime</div></div>
-            <div class="proj-stat"><div class="proj-stat-val">70%</div><div class="proj-stat-key">Faster env setup</div></div>
-          </div>
-          <a href="https://github.com/ayu-haker" target="_blank" class="proj-link">⌥ GitHub →</a>
+          <div class="proj-stats"><div class="proj-stat"><div class="proj-stat-val">arXiv</div><div class="proj-stat-key">Published</div></div><div class="proj-stat"><div class="proj-stat-val">Sole</div><div class="proj-stat-key">Author</div></div></div>
+          <a href="https://arxiv.org/abs/2609.04210" target="_blank" class="proj-link">📄 arXiv →</a>
         </div>
       </div>
 
@@ -1043,20 +1053,15 @@ footer .footer-meta{margin-top:8px;display:block;color:var(--dim);font-size:10px
         <div class="proj-card-accent"></div>
         <div class="proj-card-body">
           <div class="proj-card-header">
-            <div class="proj-icon-wrap">🤖</div>
-            <div class="proj-meta">
-              <span class="proj-category" style="color:#00ff88">MLOps · AI</span>
-            </div>
+            <div class="proj-icon-wrap">💿</div>
+            <div class="proj-meta"><span class="proj-category" style="color:#00ff88">Linux · Tooling</span></div>
           </div>
-          <div class="proj-name">AI Mentor Platform</div>
-          <div class="proj-desc">LLM-powered mentoring platform with LangChain and semantic RAG using Pinecone vector DB. Containerized and deployed via GitHub Actions CI/CD to GCP Cloud Run — fully serverless.</div>
-          <div class="proj-stack"><span>Python</span><span>LangChain</span><span>LLM</span><span>RAG</span><span>Pinecone</span><span>Docker</span><span>GCP Cloud Run</span></div>
+          <div class="proj-name">CommitOS</div>
+          <div class="proj-desc">Custom DevOps-ready Linux OS, shipped as both a Docker image and a bootable ISO, preloaded with 25+ tools spanning containers, orchestration, IaC, CI/CD, security and cloud CLIs.</div>
+          <div class="proj-stack"><span>Docker</span><span>Kubernetes</span><span>Terraform</span><span>Ansible</span><span>Jenkins</span><span>ArgoCD</span></div>
         </div>
         <div class="proj-card-footer">
-          <div class="proj-stats">
-            <div class="proj-stat"><div class="proj-stat-val">0ms</div><div class="proj-stat-key">Downtime</div></div>
-            <div class="proj-stat"><div class="proj-stat-val">RAG</div><div class="proj-stat-key">Semantic search</div></div>
-          </div>
+          <div class="proj-stats"><div class="proj-stat"><div class="proj-stat-val">25+</div><div class="proj-stat-key">Tools</div></div><div class="proj-stat"><div class="proj-stat-val">ISO + Docker</div><div class="proj-stat-key">Formats</div></div></div>
           <a href="https://github.com/ayu-haker" target="_blank" class="proj-link">⌥ GitHub →</a>
         </div>
       </div>
@@ -1065,20 +1070,15 @@ footer .footer-meta{margin-top:8px;display:block;color:var(--dim);font-size:10px
         <div class="proj-card-accent"></div>
         <div class="proj-card-body">
           <div class="proj-card-header">
-            <div class="proj-icon-wrap">⚡</div>
-            <div class="proj-meta">
-              <span class="proj-category" style="color:#ffb700">Automation · IaC</span>
-            </div>
+            <div class="proj-icon-wrap">🔌</div>
+            <div class="proj-meta"><span class="proj-category" style="color:#ffb700">AI · Automation</span></div>
           </div>
-          <div class="proj-name">Ghost Tech Automation Suite</div>
-          <div class="proj-desc">Automated configuration management across 10+ cloud instances with Ansible playbooks. AWS Lambda functions for event-driven auto-scaling and intelligent cost optimization triggers.</div>
-          <div class="proj-stack"><span>Python</span><span>Ansible</span><span>AWS Lambda</span><span>Bash</span><span>Terraform</span></div>
+          <div class="proj-name">USB Dev Agent</div>
+          <div class="proj-desc">Portable AI-powered DevOps assistant running from a USB drive, with local LLMs, file monitoring, Git automation and automated development workflows.</div>
+          <div class="proj-stack"><span>Python</span><span>Docker</span><span>Git</span><span>Local LLMs</span><span>Automation</span></div>
         </div>
         <div class="proj-card-footer">
-          <div class="proj-stats">
-            <div class="proj-stat"><div class="proj-stat-val">35%</div><div class="proj-stat-key">Cost cut</div></div>
-            <div class="proj-stat"><div class="proj-stat-val">10+</div><div class="proj-stat-key">Instances</div></div>
-          </div>
+          <div class="proj-stats"><div class="proj-stat"><div class="proj-stat-val">Local</div><div class="proj-stat-key">LLMs</div></div><div class="proj-stat"><div class="proj-stat-val">Portable</div><div class="proj-stat-key">USB</div></div></div>
           <a href="https://github.com/ayu-haker" target="_blank" class="proj-link">⌥ GitHub →</a>
         </div>
       </div>
@@ -1090,23 +1090,40 @@ footer .footer-meta{margin-top:8px;display:block;color:var(--dim);font-size:10px
 <div class="beam-divider"></div>
 
 <!-- CERTIFICATIONS -->
+<section id="publications">
+  <div class="section-inner">
+    <div class="section-label reveal">Research</div>
+    <div class="section-title reveal">Publication</div>
+    <div class="edu-grid" style="grid-template-columns:1fr">
+      <div class="edu-card reveal reveal-scale stagger-1">
+        <div class="edu-degree">SH-PDOPS: AI-Driven Cloud Native Enterprise Reliability Framework for Predictive Analytics and Intelligent DevOps Automation</div>
+        <div class="edu-school">Sole author · arXiv:2609.04210 [cs.SE]</div>
+        <p style="font-size:13px;color:#7a9ab5;line-height:1.7;margin:10px 0">A self-healing, predictive DevOps framework for autonomous cloud-native deployment, combining Kubernetes, Docker packaging, Jenkins CI/CD automation and AI-driven predictive monitoring. Focuses on earlier incident detection, AI-assisted rollback decisions, controlled auto-scaling and workflow recommendations — evaluated on MTTD, MTTR, system overhead and automation coverage.</p>
+        <a href="https://arxiv.org/abs/2609.04210" target="_blank" class="proj-link" style="display:inline-flex">📄 arxiv.org/abs/2609.04210 →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="beam-divider"></div>
+
 <section id="certifications">
   <div class="section-inner">
     <div class="section-label reveal">Credentials</div>
     <div class="section-title reveal">Certifications</div>
     <div class="cert-grid">
-      <div class="cert-card reveal stagger-1"><div class="cert-icon">☁️</div><div><div class="cert-name">AWS Certified Solutions Architect – Associate</div><div class="cert-issuer">Amazon Web Services · In Progress</div></div></div>
-      <div class="cert-card reveal stagger-2"><div class="cert-icon">🏗️</div><div><div class="cert-name">AWS APAC Solutions Architecture Job Simulation</div><div class="cert-issuer">Forage / AWS</div></div></div>
-      <div class="cert-card reveal stagger-3"><div class="cert-icon">☁️</div><div><div class="cert-name">Google Cloud Computing Fundamentals</div><div class="cert-issuer">Google Cloud</div></div></div>
-      <div class="cert-card reveal stagger-4"><div class="cert-icon">🔧</div><div><div class="cert-name">Getting Started with DevOps on AWS</div><div class="cert-issuer">AWS Skill Builder</div></div></div>
-      <div class="cert-card reveal stagger-1"><div class="cert-icon">🐳</div><div><div class="cert-name">Docker Essentials</div><div class="cert-issuer">IBM / Cognitive Class</div></div></div>
-      <div class="cert-card reveal stagger-2"><div class="cert-icon">⚙️</div><div><div class="cert-name">Kubernetes for Beginners</div><div class="cert-issuer">KodeKloud / Linux Foundation</div></div></div>
-      <div class="cert-card reveal stagger-3"><div class="cert-icon">🔒</div><div><div class="cert-name">Cybersecurity Fundamentals</div><div class="cert-issuer">IBM / Coursera</div></div></div>
-      <div class="cert-card reveal stagger-4"><div class="cert-icon">🧠</div><div><div class="cert-name">Machine Learning Foundations</div><div class="cert-issuer">Andrew Ng / DeepLearning.AI</div></div></div>
-      <div class="cert-card reveal stagger-1"><div class="cert-icon">🤖</div><div><div class="cert-name">LangChain for LLM Application Development</div><div class="cert-issuer">DeepLearning.AI</div></div></div>
-      <div class="cert-card reveal stagger-2"><div class="cert-icon">✨</div><div><div class="cert-name">Generative AI for Everyone</div><div class="cert-issuer">DeepLearning.AI / Coursera</div></div></div>
-      <div class="cert-card reveal stagger-3"><div class="cert-icon">⚡</div><div><div class="cert-name">GitHub Actions: CI/CD Pipelines</div><div class="cert-issuer">GitHub Learning Pathways</div></div></div>
-      <div class="cert-card reveal stagger-4"><div class="cert-icon">🛡️</div><div><div class="cert-name">VAPT Basics</div><div class="cert-issuer">EC-Council CodeRed</div></div></div>
+      <div class="cert-card reveal stagger-1"><div class="cert-icon">🏅</div><div><div class="cert-name">Microsoft Certified: DevOps Engineer Expert</div><div class="cert-issuer">Microsoft · Issued Oct 2026 · Expires Oct 2027</div></div></div>
+      <div class="cert-card reveal stagger-2"><div class="cert-icon">☁️</div><div><div class="cert-name">Microsoft Certified: Azure Administrator Associate</div><div class="cert-issuer">Microsoft · Issued Sep 2026 · Expires Sep 2027</div></div></div>
+      <div class="cert-card reveal stagger-3"><div class="cert-icon">☁️</div><div><div class="cert-name">AWS Certified Solutions Architect – Associate</div><div class="cert-issuer">Amazon Web Services · Issued Sep 2024 · Expires Sep 2026</div></div></div>
+      <div class="cert-card reveal stagger-4"><div class="cert-icon">🌐</div><div><div class="cert-name">Google Cloud Computing Foundations: Cloud Computing Fundamentals</div><div class="cert-issuer">Google · Issued Jun 2026</div></div></div>
+      <div class="cert-card reveal stagger-1"><div class="cert-icon">🔒</div><div><div class="cert-name">Introduction to Security Principles in Cloud Computing</div><div class="cert-issuer">Google · Issued Jan 2026</div></div></div>
+      <div class="cert-card reveal stagger-2"><div class="cert-icon">🗄️</div><div><div class="cert-name">Create a Secure Data Lake in Cloud Storage</div><div class="cert-issuer">Google · Issued Jul 2024</div></div></div>
+      <div class="cert-card reveal stagger-3"><div class="cert-icon">⚖️</div><div><div class="cert-name">Implement Cloud Load Balancing in Compute Engine</div><div class="cert-issuer">Google · Issued Jul 2024</div></div></div>
+      <div class="cert-card reveal stagger-4"><div class="cert-icon">📊</div><div><div class="cert-name">Get Started with Dataplex Skill Badge</div><div class="cert-issuer">Google Cloud</div></div></div>
+      <div class="cert-card reveal stagger-1"><div class="cert-icon">📈</div><div><div class="cert-name">Google Analytics Individual Qualification</div><div class="cert-issuer">Google</div></div></div>
+      <div class="cert-card reveal stagger-2"><div class="cert-icon">📱</div><div><div class="cert-name">App Building with AppSheet Skill Badge</div><div class="cert-issuer">Google Cloud</div></div></div>
+      <div class="cert-card reveal stagger-3"><div class="cert-icon">🧠</div><div><div class="cert-name">Certificate of Completion: AI Fluency Framework &amp; Foundations</div><div class="cert-issuer">Anthropic</div></div></div>
+      <div class="cert-card reveal stagger-4"><div class="cert-icon">🐍</div><div><div class="cert-name">Python</div><div class="cert-issuer">Certification</div></div></div>
     </div>
   </div>
 </section>
@@ -1128,6 +1145,11 @@ footer .footer-meta{margin-top:8px;display:block;color:var(--dim);font-size:10px
         <div class="edu-degree">Minor — Artificial Intelligence</div>
         <div class="edu-school">Indian Institute of Technology, Ropar</div>
         <div class="edu-period">Aug 2024 – May 2025</div>
+      </div>
+      <div class="edu-card reveal reveal-left stagger-3">
+        <div class="edu-degree">Associate of Science — Computer &amp; Information Sciences</div>
+        <div class="edu-school">Kendriya Vidyalaya</div>
+        <div class="edu-period">Foundation</div>
       </div>
     </div>
   </div>
@@ -1194,7 +1216,7 @@ footer .footer-meta{margin-top:8px;display:block;color:var(--dim);font-size:10px
 <footer>
   <span class="footer-name">Ayushman Bosu Roy</span>
   <span class="footer-tagline">DevOps & Cloud Engineer · Jaipur, India</span>
-  <span class="footer-meta">Built with precision. Deployed with confidence. &nbsp;·&nbsp; © 2025 Ayushman Bosu Roy</span>
+  <span class="footer-meta">Built with precision. Deployed with confidence. &nbsp;·&nbsp; © 2026 Ayushman Bosu Roy</span>
 </footer>
 
 <div class="status-bar"><div class="status-dot"></div>Open to work</div>
